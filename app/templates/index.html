@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>{{ app_name }} — thoughtful plans, within budget</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/"><span class="brand-mark">p.</span><span>PocketSmart<span class="brand-ai"> AI</span></span></a>
+    <nav><a href="#planners">Planners</a><a href="#how">How it works</a><button id="history-link" class="nav-link hidden">My plans</button></nav>
+    <div class="account"><span id="user-label" class="user-label"></span><button id="auth-open" class="button button-outline">Sign in</button><button id="logout" class="button button-dark hidden">Sign out</button></div>
+  </header>
+  <main>
+    <section class="hero"><div class="hero-copy"><span class="eyebrow"><span class="status-dot"></span> YOUR BUDGET, WITH A LITTLE MORE CLARITY</span>
+      <h1>Big plans.<br><em>Smarter spending.</em></h1><p>From a room refresh to your next celebration, turn a budget into a thoughtful plan that feels like you.</p>
+      <a class="button button-dark hero-cta" href="#planners">Choose a planner <span>↓</span></a>
+      <div class="hero-note"><span class="mini-avatar">✦</span><span>Personalized ideas, made to fit your number.</span></div></div>
+      <div class="hero-art" aria-label="Illustration of a budget planning dashboard"><div class="sun"></div><div class="art-card"><div class="art-card-head"><span>YOUR NEXT CHAPTER</span><span class="tiny-icon">↗</span></div><div class="art-title">A home that<br>feels like <i>you.</i></div><div class="art-budget"><span>PLANNED BUDGET</span><strong>₹ 48,000</strong><div class="progress"><i></i></div><small>₹ 9,400 left to explore</small></div><div class="art-pills"><span>01 · Living</span><span>02 · Dining</span></div></div><div class="art-sticker">good<br>things<br>ahead ✳</div><div class="art-flower">✳</div></div>
+    </section>
+    <section id="planners" class="planner-section"><div class="section-heading"><div><span class="eyebrow">A PLAN FOR EVERY OCCASION</span><h2>What are you planning?</h2></div><p>Choose a starting point. You can tailor every detail along the way.</p></div>
+      <div class="planner-grid">
+        <button class="planner-card home-card" data-planner="home"><span class="card-top"><span class="card-icon">⌂</span><span class="card-arrow">↗</span></span><span class="card-number">01 / HOME</span><strong>Make room<br>for better living.</strong><span class="card-description">Plan a refresh for the rooms you love, one considered choice at a time.</span><span class="card-link">Plan my space <b>→</b></span><span class="card-illustration home-illustration">▱</span></button>
+        <button class="planner-card party-card" data-planner="party"><span class="card-top"><span class="card-icon">✳</span><span class="card-arrow">↗</span></span><span class="card-number">02 / GATHER</span><strong>Make it a<br>moment to remember.</strong><span class="card-description">Give good people, good food, and the details a sensible budget.</span><span class="card-link">Plan a gathering <b>→</b></span><span class="card-illustration party-illustration">✹</span></button>
+        <button class="planner-card jewelry-card" data-planner="jewelry"><span class="card-top"><span class="card-icon">◇</span><span class="card-arrow">↗</span></span><span class="card-number">03 / JEWELRY</span><strong>A little sparkle,<br>chosen just right.</strong><span class="card-description">Find occasion-ready pieces that suit your style and your spend.</span><span class="card-link">Find my finishing touch <b>→</b></span><span class="card-illustration jewelry-illustration">◈</span></button>
+      </div>
+    </section>
+    <section class="how-section" id="how"><div class="how-intro"><span class="eyebrow">LESS GUESSWORK, MORE GOOD IDEAS</span><h2>A clear plan<br>changes everything.</h2><p>Start with a number and a few details. We’ll help you see what could fit.</p></div><div class="how-steps"><div class="step"><span>01</span><div><strong>Set your budget</strong><p>Pick a comfortable limit and tell us what matters most.</p></div></div><div class="step"><span>02</span><div><strong>Get a thoughtful plan</strong><p>Explore an estimated mix of ideas from familiar platforms.</p></div></div><div class="step"><span>03</span><div><strong>Make it your own</strong><p>Compare options, adjust, and shop directly with sellers.</p></div></div></div></section>
+    <section id="results" class="results-section hidden"><div class="results-heading"><div><span class="eyebrow">YOUR POCKETSMART PLAN</span><h2 id="result-title">Your plan</h2></div><button id="clear-results" class="button button-outline">← Make another plan</button></div><div id="result-content"></div></section>
+    <section id="history-section" class="results-section hidden"><div class="results-heading"><div><span class="eyebrow">SAVED FOR YOU</span><h2>Your recent plans</h2></div><button id="close-history" class="button button-outline">Close</button></div><div id="history-content"></div></section>
+    <section id="auth-section" class="auth-panel hidden"><button id="auth-close" class="close-button" aria-label="Close">×</button><div class="auth-copy"><span class="eyebrow">YOUR IDEAS, ALL IN ONE PLACE</span><h2 id="auth-title">Welcome back.</h2><p id="auth-subtitle">Sign in to save your plans and pick up where you left off.</p></div><form id="auth-form"><label id="name-wrap" class="hidden">Your name<input id="auth-name" autocomplete="name" minlength="2" maxlength="60"></label><label>Email address<input id="auth-email" type="email" required autocomplete="email"></label><label>Password<input id="auth-password" type="password" required minlength="8" autocomplete="current-password"></label><p class="form-error" id="auth-error"></p><button class="button button-dark full-button" id="auth-submit">Sign in</button></form><p class="auth-switch"><span id="auth-switch-text">New to PocketSmart?</span> <button id="auth-switch" class="text-button">Create an account</button></p></section>
+  </main>
+  <footer><a class="brand" href="/"><span class="brand-mark">p.</span><span>PocketSmart<span class="brand-ai"> AI</span></span></a><p>Plan with care. Spend with confidence.</p><small>Prices and availability are estimates. Please confirm with the seller.</small></footer>
+  <div id="planner-modal" class="modal-backdrop hidden"><section class="planner-modal"><button id="modal-close" class="close-button" aria-label="Close">×</button><span id="modal-kicker" class="eyebrow">HOME PLANNER</span><h2 id="modal-title">Let's make a plan.</h2><p id="modal-description" class="modal-description"></p><form id="planner-form"></form></section></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/static/app.js" defer></script>
+</body></html>
